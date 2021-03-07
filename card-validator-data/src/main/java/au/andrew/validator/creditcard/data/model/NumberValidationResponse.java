@@ -9,5 +9,4 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class NumberValidationResponse {
     private String validationMessage;
-    private String errorMessage;
 }
