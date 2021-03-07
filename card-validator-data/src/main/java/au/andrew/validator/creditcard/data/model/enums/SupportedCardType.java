@@ -16,12 +16,10 @@ public enum SupportedCardType {
     VISA(Collections.singletonList("4"), Arrays.asList(13, 16), "VISA"),
     UNKNOWN(Collections.EMPTY_LIST, Collections.EMPTY_LIST, "Unknown");
 
-    //TODO: check if it can be final
-    private List<String> start;
-    private List<Integer> length;
-    private String name;
+    private final List<String> start;
+    private final List<Integer> length;
+    private final String name;
 
-    //TODO: use stream instead of for
     public static SupportedCardType getTypeByNumber(String number) {
         SupportedCardType supportedCardType = UNKNOWN;
         if(number == null || number.length() == 0) return supportedCardType;
